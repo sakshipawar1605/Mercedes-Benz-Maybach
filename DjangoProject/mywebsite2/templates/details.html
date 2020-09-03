@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+Here are the details of you: <br> {{detail}} <br><br/>
+You have entered {{total_words}} words <br>
+you entered word sakshi {{count}} times. <br><br/>
+Here is the total break up of words: <br>
+{{dictionary}} <br><br/>
+Total break up in tabular form:
+{% for word, count in dictionary %}
+<table>
+    <tr><th>Word</th>
+        <td>{{word}}</td>
+        <td>{{count}}</td>
+    </tr>
+</table>
+{% endfor%}
+
+<br><br/>
+Total break up of words in an other format is:
+{% for word, count in dictionary %}
+<table>
+{{word}} : {{count}} <br>
+</table>
+{% endfor%}
+
+</body>
+</html>
